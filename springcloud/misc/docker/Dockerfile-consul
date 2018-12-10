@@ -1,0 +1,8 @@
+FROM registry.datayes.com/base/ubuntu:16.04-33
+
+RUN mkdir /opt/consul
+WORKDIR /opt/consul
+ADD consul /opt/consul
+ADD docker/entrypoint.sh /opt/consul/entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]

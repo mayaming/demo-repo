@@ -2,3 +2,5 @@
 target/
 **/target/
 *.iml
+springcloud/misc/consul
+springcloud/misc/*.zip

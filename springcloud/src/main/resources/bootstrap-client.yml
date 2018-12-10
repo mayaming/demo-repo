@@ -1,0 +1,13 @@
+spring:
+  application:
+    name:
+      consul-example-client
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8501
+      discovery:
+        register: false
+
+server:
+  port: 8081

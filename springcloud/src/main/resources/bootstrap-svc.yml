@@ -1,0 +1,11 @@
+spring:
+  application:
+    name:
+      consul-example-svc
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8501
+      discovery:
+        healthCheckPath: /consul/health
+        healthCheckInterval: 15s
