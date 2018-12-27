@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "771c8fe3-390b-409b-832c-12778c48a6d9",
+		"name": "ES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ES-info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:9200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES-stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:9200/_stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"_stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES-post-doc-example",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"John\",\n    \"lastname\" : \"Doe\",\n    \"job_description\" : \"Systems administrator and Linux specialit\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/accounts/person/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"person",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES-post-doc-another-example",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"John\",\n    \"lastname\" : \"Smith\",\n    \"job_description\" : \"Systems administrator\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/accounts/person/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"person",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES-update-doc-example",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"doc\":{\n       \"job_description\" : \"Systems administrator and Linux specialist\"\n     }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/accounts/person/1/_update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"person",
+						"1",
+						"_update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES-get-doc-example",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"John\",\n    \"lastname\" : \"Doe\",\n    \"job_description\" : \"Systems administrator and Linux specialit\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/accounts/person/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"person",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES-search-doc-example",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"John\",\n    \"lastname\" : \"Doe\",\n    \"job_description\" : \"Systems administrator and Linux specialit\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/_search?q=john",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"_search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "john"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES-search-doc-another-example",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"John\",\n    \"lastname\" : \"Doe\",\n    \"job_description\" : \"Systems administrator and Linux specialit\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/_search?q=smith",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"_search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "smith"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES-search-doc-field-example",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"John\",\n    \"lastname\" : \"Doe\",\n    \"job_description\" : \"Systems administrator and Linux specialit\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/_search?q=job_description:john",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"_search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "job_description:john"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ES-search-doc-field-index-example",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"John\",\n    \"lastname\" : \"Doe\",\n    \"job_description\" : \"Systems administrator and Linux specialit\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9200/accounts/person/_search?q=job_description:linux",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"person",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "job_description:linux"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
