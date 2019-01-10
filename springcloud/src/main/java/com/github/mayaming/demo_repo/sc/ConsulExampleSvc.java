@@ -1,4 +1,4 @@
-package com.github.mayaming.demo_repo.springcloud;
+package com.github.mayaming.demo_repo.sc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

@@ -1,4 +1,4 @@
-package com.github.mayaming.demo_repo.springcloud;
+package com.github.mayaming.demo_repo.sc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

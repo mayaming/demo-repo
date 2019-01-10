@@ -16,6 +16,7 @@
 		<module>kafka</module>
 		<module>springcloud</module>
 		<module>spark</module>
+		<module>dubbo</module>
 	</modules>
 
 	<dependencies>
